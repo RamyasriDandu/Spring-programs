@@ -1,0 +1,9 @@
+package com.boots.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.boots.model.Orders;
+
+public interface OrdersDao extends JpaRepository<Orders, Integer>{
+
+}

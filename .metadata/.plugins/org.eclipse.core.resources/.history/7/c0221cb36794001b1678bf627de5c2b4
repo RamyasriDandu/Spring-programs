@@ -1,0 +1,25 @@
+package com.boots.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.boots.dao.OrdersDao;
+import com.boots.dao.ProductDao;
+import com.boots.model.Products;
+
+@Service
+public class ProductAndService {
+	@Autowired
+	private ProductDao productdao;
+	
+	@Autowired
+	private OrdersDao orderdao;
+	
+	@PostMapping
+	public Products createProduct(Products product) {
+		return productdao.save(product);
+	}
+	
+
+}
